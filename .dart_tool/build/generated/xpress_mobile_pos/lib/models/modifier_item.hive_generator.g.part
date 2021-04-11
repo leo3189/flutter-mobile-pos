@@ -1,0 +1,82 @@
+// **************************************************************************
+// TypeAdapterGenerator
+// **************************************************************************
+
+class ModifierItemAdapter extends TypeAdapter<ModifierItem> {
+  @override
+  final int typeId = 12;
+
+  @override
+  ModifierItem read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return ModifierItem(
+      fields[0] as int,
+      fields[1] as String,
+      fields[2] as int,
+      fields[3] as double,
+      fields[4] as double,
+      fields[5] as bool,
+      fields[6] as bool,
+      fields[7] as bool,
+      fields[8] as bool,
+      fields[9] as int,
+      fields[10] as bool,
+      fields[11] as int,
+      fields[12] as bool,
+      fields[13] as bool,
+      fields[14] as int,
+      (fields[15] as List)?.cast<NameList>(),
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, ModifierItem obj) {
+    writer
+      ..writeByte(16)
+      ..writeByte(0)
+      ..write(obj.id)
+      ..writeByte(1)
+      ..write(obj.branchId)
+      ..writeByte(2)
+      ..write(obj.modifierGroupID)
+      ..writeByte(3)
+      ..write(obj.price)
+      ..writeByte(4)
+      ..write(obj.price2)
+      ..writeByte(5)
+      ..write(obj.isMandatory)
+      ..writeByte(6)
+      ..write(obj.isDefault)
+      ..writeByte(7)
+      ..write(obj.enabled)
+      ..writeByte(8)
+      ..write(obj.isDeleted)
+      ..writeByte(9)
+      ..write(obj.orderIndex)
+      ..writeByte(10)
+      ..write(obj.isParent)
+      ..writeByte(11)
+      ..write(obj.parentId)
+      ..writeByte(12)
+      ..write(obj.noteRequired)
+      ..writeByte(13)
+      ..write(obj.isOnlineOrder)
+      ..writeByte(14)
+      ..write(obj.imageID)
+      ..writeByte(15)
+      ..write(obj.nameList);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is ModifierItemAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}

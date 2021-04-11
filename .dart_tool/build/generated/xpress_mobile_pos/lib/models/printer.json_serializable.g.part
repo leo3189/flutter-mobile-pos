@@ -1,0 +1,63 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+Printer _$PrinterFromJson(Map<String, dynamic> json) {
+  return Printer(
+    json['id'] as String,
+    json['branchID'] as String,
+    json['name'] as String,
+    json['virtualReceiptID'] as String,
+    json['copies'] as int,
+    json['selfOrderPrinter'] as bool,
+    (json['languages'] as List)
+        ?.map((e) => e == null
+            ? null
+            : PrinterLanguage.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    (json['orderTypes'] as List)
+        ?.map((e) => e == null
+            ? null
+            : PrinterOrderType.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+  );
+}
+
+Map<String, dynamic> _$PrinterToJson(Printer instance) => <String, dynamic>{
+      'id': instance.id,
+      'branchID': instance.branchID,
+      'name': instance.name,
+      'virtualReceiptID': instance.virtualReceiptID,
+      'copies': instance.copies,
+      'selfOrderPrinter': instance.selfOrderPrinter,
+      'languages': instance.languages?.map((e) => e?.toJson())?.toList(),
+      'orderTypes': instance.orderTypes?.map((e) => e?.toJson())?.toList(),
+    };
+
+PrinterLanguage _$PrinterLanguageFromJson(Map<String, dynamic> json) {
+  return PrinterLanguage(
+    json['printerID'] as String,
+    json['languageID'] as int,
+    json['orderIndex'] as int,
+  );
+}
+
+Map<String, dynamic> _$PrinterLanguageToJson(PrinterLanguage instance) =>
+    <String, dynamic>{
+      'printerID': instance.printerID,
+      'languageID': instance.languageID,
+      'orderIndex': instance.orderIndex,
+    };
+
+PrinterOrderType _$PrinterOrderTypeFromJson(Map<String, dynamic> json) {
+  return PrinterOrderType(
+    json['printerID'] as String,
+    json['orderTypeID'] as int,
+  );
+}
+
+Map<String, dynamic> _$PrinterOrderTypeToJson(PrinterOrderType instance) =>
+    <String, dynamic>{
+      'printerID': instance.printerID,
+      'orderTypeID': instance.orderTypeID,
+    };

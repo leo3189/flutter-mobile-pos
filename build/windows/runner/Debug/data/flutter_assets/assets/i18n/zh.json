@@ -1,0 +1,191 @@
+{
+    "StartPage": {
+        "Start": "开始",
+        "setting": "设置"
+    },
+    "StayPage": {
+        "navBar": {
+            "back": "返回",
+            "home": "首页",
+            "language": "语言",
+            "order": "订单",
+            "addOrder": " 已经添加到您的订单"
+        },
+        "content": {
+            "toGo": "外带",
+            "stay": "堂食"
+        }
+    },
+    "CategoriesPage": {
+        "addToOrder": "添加到订单",
+        "multilBtn": {
+            "small": "小",
+            "medium": "中",
+            "large": "大"
+        },
+        "orderWarning": "蛋糕訂單只能包含一個蛋糕產品"
+    },
+    "Refresh": {
+        "loading": "加载中...",
+        "completeText": "刷新完成",
+        "refreshingText": "刷新中...",
+        "idleText": "下拉刷新",
+        "releaseText": "释放刷新",
+        "pullUpLoadText": "上拉加载",
+        "canLoadingText": "释放加载"
+    },
+    "Sugar": {
+        "cancel": "取消",
+        "next": "下一步",
+        "price": "价格",
+        "select": "选择 ",
+        "item": " 选项",
+        "skip": "跳过"
+    },
+    "ViewOrder": {
+        "title": "我的订单",
+        "addMore": "添加更多",
+        "confirmOrder": "确认订单",
+        "totalItem": "您的订单里共有{count}个餐品",
+        "subTotal": "小计",
+        "tax": "税",
+        "total": "总计",
+        "deleteItem": "您想要删除这个餐品吗？",
+        "comment": "备注",
+        "addComment": "添加备注",
+        "cancelBtn": "取消",
+        "deleteBtn": "删除",
+        "edit": "修改",
+        "clear": "清空"
+    },
+    "payment": {
+        "total": "总计",
+        "paymentType": "选择支付方式",
+        "cash": "现金",
+        "creditCard": "信用卡",
+        "cancelBtn": "取消",
+        "order": "订单号#  ",
+        "cashPay": "请拿着小票到收银处进行付款"
+    },
+    "creditCard": {
+        "tips": "小费",
+        "receipts": "收据",
+        "total": "总计: ${args}",
+        "tipSelection": "选择小费",
+        "noTips": "无小费",
+        "tipAmount": "小费 ${args}",
+        "totalwithtips": "加小费后总价:",
+        "cancel": "取消",
+        "pay": "支付",
+        "insertCard": "请刷卡或插卡",
+        "cancelledCreditCard": "信用卡付款已取消",
+        "cardReadFailed": "信用卡付款出錯, 請重試.",
+        "connectionError": "無法連結信用卡機器",
+        "paymentFailed": "信用卡付款失敗"
+    },
+    "signature": {
+        "title": "签名",
+        "tip": "小费: ${args}",
+        "totalAmount": "总金额: ${args}",
+        "signHere": "在此处签名",
+        "agreement": "我同意根据发卡行协议支付上述金额",
+        "cancel": "取消",
+        "done": "完成"
+    },
+    "receipt": {
+        "title": "收据",
+        "receiptType": "你想如何获取收据",
+        "billAmount": "金额: ${args}",
+        "orderNo": "# 订单号 {args}",
+        "email": "邮箱",
+        "text": "短信",
+        "print": "打印",
+        "noReceipt": "无收据"
+    },
+    "receiptEmail": {
+        "title": "邮箱地址",
+        "willSend": "收据将会发送至你的邮箱",
+        "firstName": "名",
+        "lastName": "姓",
+        "emailAddress": "邮箱地址",
+        "cancel": "取消",
+        "clear": "清空",
+        "done": "完成",
+        "firstNameCheck": "名 不能为空",
+        "lastNameCheck": "姓 不能为空",
+        "emailCheck": "邮箱格式不正确",
+        "emailNull": "邮箱不能为空"
+    },
+    "receiptText": {
+        "title": "短信 收据",
+        "willSend": "收据将会发送至你的手机号",
+        "firstName": "名",
+        "lastName": "姓",
+        "phone": "手机号码",
+        "cancel": "取消",
+        "clear": "清空",
+        "done": "完成",
+        "firstNameCheck": "名 不能为空",
+        "lastNameCheck": "姓 不能为空",
+        "phoneCheck": "手机号码不正确",
+        "phoneNull": "手机号码不能为空"
+    },
+    "orderComplete": {
+        "sent": "你的收据已被发送至 {address}",
+        "thankYou": "谢谢！",
+        "no": "已完成.",
+        "print": "您的小票已打印."
+    },
+    "memberJoin": {
+        "title": "你有机会获得一份礼品",
+        "points": "你现在可以赚取积分来兑换礼品",
+        "enter": "输入你的电话号码来赚取积分",
+        "hintText": "电话号码 *",
+        "reuiredField": "* 必填项",
+        "notNull": "电话号码不能为空",
+        "confirm": "确认",
+        "tapToJoin": "还不是会员？点这里加入。",
+        "skip": "跳过"
+    },
+    "memberJoinCreate": {
+        "title": "你有机会获得一份礼品",
+        "points": "你现在可以赚取积分来兑换礼品",
+        "join": "参加我们的会员并从现在开始获取积分",
+        "firstNamehintText": "名 *",
+        "firstNameNotNull": "名不能为空",
+        "lastNamehintText": "姓 *",
+        "lastNameNotNull": "姓不能为空",
+        "phoneNumberhintText": "电话号码 *",
+        "phoneNumberNotNull": "电话号码不能为空",
+        "hintText": "邮箱",
+        "reuiredField": "* 必填项",
+        "agree": "进入下一步，你将同意我们的条款和政策。",
+        "joinNow": "现在加入",
+        "haveMember": "如果你已经是会员，点这里。",
+        "skip": "跳过"
+    },
+    "customerInformation": {
+        "title": "顧客信息",
+        "name": "姓名",
+        "phone": "電話",
+        "email": "郵箱",
+        "address": "地址",
+        "city": "城市",
+        "state": "州",
+        "zip": "郵編"
+    },
+    "pickUpInformation": {
+        "title": "取餐信息",
+        "pickUpLocation": "取餐位置",
+        "pickUpDate": "取餐日期",
+        "pickUpTime": "取餐時間"
+    },
+    "verification": {
+        "title": "确认",
+        "sent": "验证码已发送至: {phone}",
+        "enter": "请在此处输出验证码",
+        "didnt": "没有收到?",
+        "sendAgain": "再次发送",
+        "verifyBtn": "验证"
+    }
+}

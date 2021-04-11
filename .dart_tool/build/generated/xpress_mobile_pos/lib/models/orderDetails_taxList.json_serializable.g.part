@@ -1,0 +1,23 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+OrderDetailsTaxList _$OrderDetailsTaxListFromJson(Map<String, dynamic> json) {
+  return OrderDetailsTaxList(
+    orderDetailsID: json['orderDetailsID'] as String,
+    taxRate: (json['taxRate'] as num)?.toDouble(),
+    taxID: json['taxID'] as int,
+    name: json['name'] as String,
+    amt: (json['amt'] as num)?.toDouble(),
+  );
+}
+
+Map<String, dynamic> _$OrderDetailsTaxListToJson(
+        OrderDetailsTaxList instance) =>
+    <String, dynamic>{
+      'orderDetailsID': instance.orderDetailsID,
+      'taxID': instance.taxID,
+      'name': instance.name,
+      'taxRate': instance.taxRate,
+      'amt': instance.amt,
+    };

@@ -1,0 +1,66 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+VariantGroup _$VariantGroupFromJson(Map<String, dynamic> json) {
+  return VariantGroup(
+    json['id'] as int,
+    json['parentId'],
+    json['branchId'] as String,
+    json['companyID'] as String,
+    json['isDeleted'] as bool,
+    json['icon'] as String,
+    json['unicode'] as String,
+    json['isParent'] as bool,
+    json['isActive'] as bool,
+    json['orderIndex'] as int,
+    (json['variantList'] as List)
+        ?.map((e) =>
+            e == null ? null : VariantList.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    (json['nameList'] as List)
+        ?.map((e) => e == null
+            ? null
+            : VariantGroupsNameList.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+  );
+}
+
+Map<String, dynamic> _$VariantGroupToJson(VariantGroup instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'parentId': instance.parentId,
+      'branchId': instance.branchId,
+      'companyID': instance.companyID,
+      'isDeleted': instance.isDeleted,
+      'icon': instance.icon,
+      'unicode': instance.unicode,
+      'isParent': instance.isParent,
+      'isActive': instance.isActive,
+      'orderIndex': instance.orderIndex,
+      'variantList': instance.variantList?.map((e) => e?.toJson())?.toList(),
+      'nameList': instance.nameList?.map((e) => e?.toJson())?.toList(),
+    };
+
+VariantGroupsNameList _$VariantGroupsNameListFromJson(
+    Map<String, dynamic> json) {
+  return VariantGroupsNameList(
+    json['id'] as int,
+    json['variantGroupID'] as int,
+    json['languageID'] as int,
+    json['fullName'] as String,
+    json['shortName'],
+    json['orderIndex'] as int,
+  );
+}
+
+Map<String, dynamic> _$VariantGroupsNameListToJson(
+        VariantGroupsNameList instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'variantGroupID': instance.variantGroupID,
+      'languageID': instance.languageID,
+      'fullName': instance.fullName,
+      'shortName': instance.shortName,
+      'orderIndex': instance.orderIndex,
+    };

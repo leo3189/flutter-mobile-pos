@@ -1,0 +1,181 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+Staff _$StaffFromJson(Map<String, dynamic> json) {
+  return Staff(
+    json['id'] as int,
+    json['companyID'] as String,
+    json['branchID'] as String,
+    json['nickName'] as String,
+    json['firstName'] as String,
+    json['lastName'] as String,
+    json['onlineStatus'] as bool,
+    json['imageID'] as int,
+    json['fileID'] as String,
+    json['ssn'] as String,
+    json['street'] as String,
+    json['city'] as String,
+    json['state'] as String,
+    json['postalCode'] as String,
+    json['phone'] as String,
+    json['email'] as String,
+    json['posPin'] as String,
+    (json['salary'] as num)?.toDouble(),
+    json['salaryType'] as String,
+    (json['otRate'] as num)?.toDouble(),
+    json['employeeCard'] as String,
+    json['note'] as String,
+    json['dob'] as String,
+    json['createdDate'] as String,
+    json['lastUpdate'] as String,
+    json['isUsingFingerprint'] as bool,
+    json['referBy'] as String,
+    json['active'] as bool,
+    json['isDeleted'] as bool,
+    json['isNeedClockIn'] as bool,
+    json['isSelfOrderUser'] as bool,
+    json['isSuperUser'] as bool,
+    (json['permissionsList'] as List)
+        ?.map((e) => e == null
+            ? null
+            : StaffPermissionList.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    (json['shifts'] as List)
+        ?.map((e) =>
+            e == null ? null : StaffShift.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    (json['shiftSettings'] as List)
+        ?.map((e) => e == null
+            ? null
+            : StaffShiftSetting.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    (json['attendances'] as List)
+        ?.map((e) => e == null
+            ? null
+            : StaffAttendance.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+  );
+}
+
+Map<String, dynamic> _$StaffToJson(Staff instance) => <String, dynamic>{
+      'id': instance.id,
+      'companyID': instance.companyID,
+      'branchID': instance.branchID,
+      'nickName': instance.nickName,
+      'firstName': instance.firstName,
+      'lastName': instance.lastName,
+      'onlineStatus': instance.onlineStatus,
+      'imageID': instance.imageID,
+      'fileID': instance.fileID,
+      'ssn': instance.ssn,
+      'street': instance.street,
+      'city': instance.city,
+      'state': instance.state,
+      'postalCode': instance.postalCode,
+      'phone': instance.phone,
+      'email': instance.email,
+      'posPin': instance.posPin,
+      'salary': instance.salary,
+      'salaryType': instance.salaryType,
+      'otRate': instance.otRate,
+      'employeeCard': instance.employeeCard,
+      'note': instance.note,
+      'dob': instance.dob,
+      'createdDate': instance.createdDate,
+      'lastUpdate': instance.lastUpdate,
+      'isUsingFingerprint': instance.isUsingFingerprint,
+      'referBy': instance.referBy,
+      'active': instance.active,
+      'isDeleted': instance.isDeleted,
+      'isNeedClockIn': instance.isNeedClockIn,
+      'isSuperUser': instance.isSuperUser,
+      'isSelfOrderUser': instance.isSelfOrderUser,
+      'permissionsList':
+          instance.permissionsList?.map((e) => e?.toJson())?.toList(),
+      'shifts': instance.shifts?.map((e) => e?.toJson())?.toList(),
+      'attendances': instance.attendances?.map((e) => e?.toJson())?.toList(),
+      'shiftSettings':
+          instance.shiftSettings?.map((e) => e?.toJson())?.toList(),
+    };
+
+StaffPermissionList _$StaffPermissionListFromJson(Map<String, dynamic> json) {
+  return StaffPermissionList(
+    json['staffID'] as int,
+    json['staffTypeID'] as int,
+    json['staffType'] == null
+        ? null
+        : StaffType.fromJson(json['staffType'] as Map<String, dynamic>),
+  );
+}
+
+Map<String, dynamic> _$StaffPermissionListToJson(
+        StaffPermissionList instance) =>
+    <String, dynamic>{
+      'staffID': instance.staffID,
+      'staffTypeID': instance.staffTypeID,
+      'staffType': instance.staffType?.toJson(),
+    };
+
+StaffShift _$StaffShiftFromJson(Map<String, dynamic> json) {
+  return StaffShift(
+    json['id'] as String,
+    json['start'] as String,
+    json['end'] as String,
+    json['title'] as String,
+    json['color'] as String,
+    json['allDay'] as bool,
+    json['customValue'] as bool,
+    json['staffTypeID'] as int,
+    json['staffID'] as int,
+    json['branchID'] as String,
+    json['shiftTypeID'] as String,
+  );
+}
+
+Map<String, dynamic> _$StaffShiftToJson(StaffShift instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'start': instance.start,
+      'end': instance.end,
+      'title': instance.title,
+      'color': instance.color,
+      'allDay': instance.allDay,
+      'customValue': instance.customValue,
+      'staffTypeID': instance.staffTypeID,
+      'staffID': instance.staffID,
+      'branchID': instance.branchID,
+      'shiftTypeID': instance.shiftTypeID,
+    };
+
+StaffAttendance _$StaffAttendanceFromJson(Map<String, dynamic> json) {
+  return StaffAttendance(
+    json['staffID'] as int,
+    json['shiftID'] as String,
+    json['clockTime'] as String,
+    json['isOtRequest'] as bool,
+    json['isClockIn'] as bool,
+  );
+}
+
+Map<String, dynamic> _$StaffAttendanceToJson(StaffAttendance instance) =>
+    <String, dynamic>{
+      'staffID': instance.staffID,
+      'shiftID': instance.shiftID,
+      'clockTime': instance.clockTime,
+      'isOtRequest': instance.isOtRequest,
+      'isClockIn': instance.isClockIn,
+    };
+
+StaffShiftSetting _$StaffShiftSettingFromJson(Map<String, dynamic> json) {
+  return StaffShiftSetting(
+    json['staffID'] as int,
+    json['shiftSettingID'] as int,
+  );
+}
+
+Map<String, dynamic> _$StaffShiftSettingToJson(StaffShiftSetting instance) =>
+    <String, dynamic>{
+      'staffID': instance.staffID,
+      'shiftSettingID': instance.shiftSettingID,
+    };

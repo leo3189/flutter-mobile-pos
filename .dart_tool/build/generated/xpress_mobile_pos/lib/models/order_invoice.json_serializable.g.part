@@ -1,0 +1,23 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+OrderInvoice _$OrderInvoiceFromJson(Map<String, dynamic> json) {
+  return OrderInvoice(
+    order: json['order'] == null
+        ? null
+        : Order.fromJson(json['order'] as Map<String, dynamic>),
+    invoices: (json['invoices'] as List)
+        ?.map((e) =>
+            e == null ? null : Invoice.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    isNewOrder: json['isNewOrder'] as bool,
+  );
+}
+
+Map<String, dynamic> _$OrderInvoiceToJson(OrderInvoice instance) =>
+    <String, dynamic>{
+      'order': instance.order?.toJson(),
+      'invoices': instance.invoices?.map((e) => e?.toJson())?.toList(),
+      'isNewOrder': instance.isNewOrder,
+    };

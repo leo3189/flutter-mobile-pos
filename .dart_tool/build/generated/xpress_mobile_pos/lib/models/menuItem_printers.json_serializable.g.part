@@ -1,0 +1,16 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+MenuItemPrinters _$MenuItemPrintersFromJson(Map<String, dynamic> json) {
+  return MenuItemPrinters(
+    json['menuItemID'] as int,
+    json['printerID'] as String,
+  );
+}
+
+Map<String, dynamic> _$MenuItemPrintersToJson(MenuItemPrinters instance) =>
+    <String, dynamic>{
+      'menuItemID': instance.menuItemID,
+      'printerID': instance.printerID,
+    };

@@ -1,0 +1,107 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+Order _$OrderFromJson(Map<String, dynamic> json) {
+  return Order(
+    id: json['id'] as String,
+    companyID: json['companyID'] as String,
+    branchID: json['branchID'] as String,
+    orderTypeID: json['orderTypeID'] as int,
+    numOfGuest: json['numOfGuest'] as int,
+    createdBy: json['createdBy'] as int,
+    customerID: json['customerID'] as String,
+    checkInTime: json['checkInTime'] as String,
+    changeAmt: (json['changeAmt'] as num)?.toDouble(),
+    toGoTime: json['toGoTime'] as String,
+    tipsPercentage: (json['tipsPercentage'] as num)?.toDouble(),
+    serviceChargePercentage:
+        (json['serviceChargePercentage'] as num)?.toDouble(),
+    tipsAmt: (json['tipsAmt'] as num)?.toDouble(),
+    serviceChargeAmt: (json['serviceChargeAmt'] as num)?.toDouble(),
+    deliveryFee: (json['deliveryFee'] as num)?.toDouble(),
+    orderStatus: json['orderStatus'] as int,
+    subtotalAmt: (json['subtotalAmt'] as num)?.toDouble(),
+    totalAmt: (json['totalAmt'] as num)?.toDouble(),
+    totalCost: (json['totalCost'] as num)?.toDouble(),
+    totalTaxAmt: (json['totalTaxAmt'] as num)?.toDouble(),
+    totalDiscountAmt: (json['totalDiscountAmt'] as num)?.toDouble(),
+    orderDiscountAmt: (json['orderDiscountAmt'] as num)?.toDouble(),
+    isCakeOrder: json['isCakeOrder'] as bool,
+    pickupLocation: json['pickupLocation'] as String,
+    note: json['note'] as String,
+    terminal: json['terminal'] as String,
+    customerPhone: json['customerPhone'] as String,
+    customerAddress: json['customerAddress'] as String,
+    customerEmail: json['customerEmail'] as String,
+    tableID: json['tableID'] as String,
+    tableName: json['tableName'] as String,
+    seqNum: json['seqNum'] as int,
+    taxList: (json['taxList'] as List)
+        ?.map((e) =>
+            e == null ? null : OrderTaxList.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    discountList: (json['discountList'] as List)
+        ?.map((e) => e == null
+            ? null
+            : OrderDiscountList.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    detailsList: (json['detailsList'] as List)
+        ?.map((e) => e == null
+            ? null
+            : OrderDetailsList.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    paidAmt: (json['paidAmt'] as num)?.toDouble(),
+    customerName: json['customerName'] as String,
+    isReprint: json['isReprint'] as bool,
+    completedBy: json['completedBy'] as int,
+    depositAmt: (json['depositAmt'] as num)?.toDouble(),
+  )
+    ..taxId = json['taxId'] as String
+    ..taxExempt = json['taxExempt'] as bool;
+}
+
+Map<String, dynamic> _$OrderToJson(Order instance) => <String, dynamic>{
+      'id': instance.id,
+      'companyID': instance.companyID,
+      'branchID': instance.branchID,
+      'orderTypeID': instance.orderTypeID,
+      'numOfGuest': instance.numOfGuest,
+      'createdBy': instance.createdBy,
+      'customerID': instance.customerID,
+      'checkInTime': instance.checkInTime,
+      'toGoTime': instance.toGoTime,
+      'tipsPercentage': instance.tipsPercentage,
+      'serviceChargePercentage': instance.serviceChargePercentage,
+      'tipsAmt': instance.tipsAmt,
+      'serviceChargeAmt': instance.serviceChargeAmt,
+      'deliveryFee': instance.deliveryFee,
+      'orderStatus': instance.orderStatus,
+      'subtotalAmt': instance.subtotalAmt,
+      'totalAmt': instance.totalAmt,
+      'totalCost': instance.totalCost,
+      'paidAmt': instance.paidAmt,
+      'changeAmt': instance.changeAmt,
+      'totalTaxAmt': instance.totalTaxAmt,
+      'totalDiscountAmt': instance.totalDiscountAmt,
+      'orderDiscountAmt': instance.orderDiscountAmt,
+      'isCakeOrder': instance.isCakeOrder,
+      'pickupLocation': instance.pickupLocation,
+      'note': instance.note,
+      'terminal': instance.terminal,
+      'customerPhone': instance.customerPhone,
+      'customerAddress': instance.customerAddress,
+      'customerName': instance.customerName,
+      'customerEmail': instance.customerEmail,
+      'tableID': instance.tableID,
+      'tableName': instance.tableName,
+      'seqNum': instance.seqNum,
+      'taxList': instance.taxList?.map((e) => e?.toJson())?.toList(),
+      'discountList': instance.discountList?.map((e) => e?.toJson())?.toList(),
+      'detailsList': instance.detailsList?.map((e) => e?.toJson())?.toList(),
+      'isReprint': instance.isReprint,
+      'completedBy': instance.completedBy,
+      'depositAmt': instance.depositAmt,
+      'taxId': instance.taxId,
+      'taxExempt': instance.taxExempt,
+    };

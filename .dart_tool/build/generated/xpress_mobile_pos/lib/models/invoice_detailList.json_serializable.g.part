@@ -1,0 +1,195 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+InvoiceDetailsList _$InvoiceDetailsListFromJson(Map<String, dynamic> json) {
+  return InvoiceDetailsList(
+    id: json['id'] as String,
+    orderDetailsId: json['orderDetailsId'] as String,
+    invoiceID: json['invoiceID'] as String,
+    companyID: json['companyID'] as String,
+    invoiceTime: json['invoiceTime'] as String,
+    branchId: json['branchId'] as String,
+    menuItemID: json['menuItemID'] as int,
+    qty: json['qty'] as int,
+    price: (json['price'] as num)?.toDouble(),
+    itemCost: (json['itemCost'] as num)?.toDouble(),
+    taxAmt: (json['taxAmt'] as num)?.toDouble(),
+    totalDiscountAmt: (json['totalDiscountAmt'] as num)?.toDouble(),
+    subTotalAmt: (json['subTotalAmt'] as num)?.toDouble(),
+    totalAmt: (json['totalAmt'] as num)?.toDouble(),
+    comment: json['comment'] as String,
+    isUsingDesignFee: json['isUsingDesignFee'] as bool,
+    designFee: (json['designFee'] as num)?.toDouble(),
+    menuCategoryId: json['menuCategoryId'] as int,
+    menuGroupId: json['menuGroupId'] as int,
+    salesCategoryId: json['salesCategoryId'] as int,
+    weight: (json['weight'] as num)?.toDouble(),
+    status: json['status'] as int,
+    modifierList: (json['modifierList'] as List)
+        ?.map((e) => e == null
+            ? null
+            : InvoiceDetailsListModifierList.fromJson(
+                e as Map<String, dynamic>))
+        ?.toList(),
+    discountList: (json['discountList'] as List)
+        ?.map((e) => e == null
+            ? null
+            : InvoiceDetailsListDiscountList.fromJson(
+                e as Map<String, dynamic>))
+        ?.toList(),
+    taxList: (json['taxList'] as List)
+        ?.map((e) => e == null
+            ? null
+            : InvoiceDetailsListTaxList.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    variantList: (json['variantList'] as List)
+        ?.map((e) => e == null
+            ? null
+            : InvoiceDetailsListVariantList.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    promotionList: (json['promotionList'] as List)
+        ?.map((e) => e == null
+            ? null
+            : InvoiceDetailsListPromotionList.fromJson(
+                e as Map<String, dynamic>))
+        ?.toList(),
+  );
+}
+
+Map<String, dynamic> _$InvoiceDetailsListToJson(InvoiceDetailsList instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'orderDetailsId': instance.orderDetailsId,
+      'invoiceID': instance.invoiceID,
+      'companyID': instance.companyID,
+      'invoiceTime': instance.invoiceTime,
+      'branchId': instance.branchId,
+      'menuItemID': instance.menuItemID,
+      'qty': instance.qty,
+      'price': instance.price,
+      'itemCost': instance.itemCost,
+      'taxAmt': instance.taxAmt,
+      'totalDiscountAmt': instance.totalDiscountAmt,
+      'subTotalAmt': instance.subTotalAmt,
+      'totalAmt': instance.totalAmt,
+      'comment': instance.comment,
+      'isUsingDesignFee': instance.isUsingDesignFee,
+      'designFee': instance.designFee,
+      'menuCategoryId': instance.menuCategoryId,
+      'menuGroupId': instance.menuGroupId,
+      'salesCategoryId': instance.salesCategoryId,
+      'weight': instance.weight,
+      'status': instance.status,
+      'modifierList': instance.modifierList?.map((e) => e?.toJson())?.toList(),
+      'discountList': instance.discountList?.map((e) => e?.toJson())?.toList(),
+      'taxList': instance.taxList?.map((e) => e?.toJson())?.toList(),
+      'variantList': instance.variantList?.map((e) => e?.toJson())?.toList(),
+      'promotionList':
+          instance.promotionList?.map((e) => e?.toJson())?.toList(),
+    };
+
+InvoiceDetailsListModifierList _$InvoiceDetailsListModifierListFromJson(
+    Map<String, dynamic> json) {
+  return InvoiceDetailsListModifierList(
+    id: json['id'] as String,
+    invoiceDetailsID: json['invoiceDetailsID'] as String,
+    modifierItemID: json['modifierItemID'] as int,
+    qty: json['qty'] as int,
+    totalAmt: (json['totalAmt'] as num)?.toDouble(),
+  );
+}
+
+Map<String, dynamic> _$InvoiceDetailsListModifierListToJson(
+        InvoiceDetailsListModifierList instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'invoiceDetailsID': instance.invoiceDetailsID,
+      'modifierItemID': instance.modifierItemID,
+      'qty': instance.qty,
+      'totalAmt': instance.totalAmt,
+    };
+
+InvoiceDetailsListDiscountList _$InvoiceDetailsListDiscountListFromJson(
+    Map<String, dynamic> json) {
+  return InvoiceDetailsListDiscountList(
+    id: json['id'] as String,
+    invoiceDetailsID: json['invoiceDetailsID'] as String,
+    discountID: json['discountID'] as int,
+    discountBy: json['discountBy'] as int,
+    name: json['name'] as String,
+    rate: (json['rate'] as num)?.toDouble(),
+    amt: (json['amt'] as num)?.toDouble(),
+    isAmtDiscount: json['isAmtDiscount'] as bool,
+  );
+}
+
+Map<String, dynamic> _$InvoiceDetailsListDiscountListToJson(
+        InvoiceDetailsListDiscountList instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'invoiceDetailsID': instance.invoiceDetailsID,
+      'discountID': instance.discountID,
+      'discountBy': instance.discountBy,
+      'name': instance.name,
+      'rate': instance.rate,
+      'amt': instance.amt,
+      'isAmtDiscount': instance.isAmtDiscount,
+    };
+
+InvoiceDetailsListTaxList _$InvoiceDetailsListTaxListFromJson(
+    Map<String, dynamic> json) {
+  return InvoiceDetailsListTaxList(
+    invoiceDetailsID: json['invoiceDetailsID'] as String,
+    taxRate: (json['taxRate'] as num)?.toDouble(),
+    taxID: json['taxID'] as int,
+    amt: (json['amt'] as num)?.toDouble(),
+    name: json['name'] as String,
+  );
+}
+
+Map<String, dynamic> _$InvoiceDetailsListTaxListToJson(
+        InvoiceDetailsListTaxList instance) =>
+    <String, dynamic>{
+      'invoiceDetailsID': instance.invoiceDetailsID,
+      'taxID': instance.taxID,
+      'name': instance.name,
+      'taxRate': instance.taxRate,
+      'amt': instance.amt,
+    };
+
+InvoiceDetailsListVariantList _$InvoiceDetailsListVariantListFromJson(
+    Map<String, dynamic> json) {
+  return InvoiceDetailsListVariantList(
+    invoiceDetailsID: json['invoiceDetailsID'] as String,
+    variantID: json['variantID'] as int,
+  );
+}
+
+Map<String, dynamic> _$InvoiceDetailsListVariantListToJson(
+        InvoiceDetailsListVariantList instance) =>
+    <String, dynamic>{
+      'invoiceDetailsID': instance.invoiceDetailsID,
+      'variantID': instance.variantID,
+    };
+
+InvoiceDetailsListPromotionList _$InvoiceDetailsListPromotionListFromJson(
+    Map<String, dynamic> json) {
+  return InvoiceDetailsListPromotionList(
+    id: json['id'] as String,
+    invoiceDetailsID: json['invoiceDetailsID'] as String,
+    promotionID: json['promotionID'] as int,
+    description: json['description'] as String,
+    amt: (json['amt'] as num)?.toDouble(),
+  );
+}
+
+Map<String, dynamic> _$InvoiceDetailsListPromotionListToJson(
+        InvoiceDetailsListPromotionList instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'invoiceDetailsID': instance.invoiceDetailsID,
+      'promotionID': instance.promotionID,
+      'description': instance.description,
+      'amt': instance.amt,
+    };

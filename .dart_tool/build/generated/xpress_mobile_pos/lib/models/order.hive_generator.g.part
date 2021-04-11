@@ -1,0 +1,154 @@
+// **************************************************************************
+// TypeAdapterGenerator
+// **************************************************************************
+
+class OrderAdapter extends TypeAdapter<Order> {
+  @override
+  final int typeId = 16;
+
+  @override
+  Order read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return Order(
+      id: fields[0] as String,
+      companyID: fields[1] as String,
+      branchID: fields[2] as String,
+      orderTypeID: fields[3] as int,
+      numOfGuest: fields[4] as int,
+      createdBy: fields[5] as int,
+      customerID: fields[6] as String,
+      checkInTime: fields[7] as String,
+      changeAmt: fields[19] as double,
+      toGoTime: fields[8] as String,
+      tipsPercentage: fields[9] as double,
+      serviceChargePercentage: fields[10] as double,
+      tipsAmt: fields[11] as double,
+      serviceChargeAmt: fields[12] as double,
+      deliveryFee: fields[13] as double,
+      orderStatus: fields[14] as int,
+      subtotalAmt: fields[15] as double,
+      totalAmt: fields[16] as double,
+      totalCost: fields[17] as double,
+      totalTaxAmt: fields[20] as double,
+      totalDiscountAmt: fields[21] as double,
+      orderDiscountAmt: fields[22] as double,
+      isCakeOrder: fields[23] as bool,
+      pickupLocation: fields[24] as String,
+      note: fields[25] as String,
+      terminal: fields[26] as String,
+      customerPhone: fields[27] as String,
+      customerAddress: fields[28] as String,
+      customerEmail: fields[30] as String,
+      tableID: fields[31] as String,
+      tableName: fields[32] as String,
+      seqNum: fields[33] as int,
+      taxList: (fields[34] as List)?.cast<OrderTaxList>(),
+      discountList: (fields[35] as List)?.cast<OrderDiscountList>(),
+      detailsList: (fields[36] as List)?.cast<OrderDetailsList>(),
+      paidAmt: fields[18] as double,
+      customerName: fields[29] as String,
+      isReprint: fields[37] as bool,
+      completedBy: fields[38] as int,
+      depositAmt: fields[39] as double,
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, Order obj) {
+    writer
+      ..writeByte(40)
+      ..writeByte(0)
+      ..write(obj.id)
+      ..writeByte(1)
+      ..write(obj.companyID)
+      ..writeByte(2)
+      ..write(obj.branchID)
+      ..writeByte(3)
+      ..write(obj.orderTypeID)
+      ..writeByte(4)
+      ..write(obj.numOfGuest)
+      ..writeByte(5)
+      ..write(obj.createdBy)
+      ..writeByte(6)
+      ..write(obj.customerID)
+      ..writeByte(7)
+      ..write(obj.checkInTime)
+      ..writeByte(8)
+      ..write(obj.toGoTime)
+      ..writeByte(9)
+      ..write(obj.tipsPercentage)
+      ..writeByte(10)
+      ..write(obj.serviceChargePercentage)
+      ..writeByte(11)
+      ..write(obj.tipsAmt)
+      ..writeByte(12)
+      ..write(obj.serviceChargeAmt)
+      ..writeByte(13)
+      ..write(obj.deliveryFee)
+      ..writeByte(14)
+      ..write(obj.orderStatus)
+      ..writeByte(15)
+      ..write(obj.subtotalAmt)
+      ..writeByte(16)
+      ..write(obj.totalAmt)
+      ..writeByte(17)
+      ..write(obj.totalCost)
+      ..writeByte(18)
+      ..write(obj.paidAmt)
+      ..writeByte(19)
+      ..write(obj.changeAmt)
+      ..writeByte(20)
+      ..write(obj.totalTaxAmt)
+      ..writeByte(21)
+      ..write(obj.totalDiscountAmt)
+      ..writeByte(22)
+      ..write(obj.orderDiscountAmt)
+      ..writeByte(23)
+      ..write(obj.isCakeOrder)
+      ..writeByte(24)
+      ..write(obj.pickupLocation)
+      ..writeByte(25)
+      ..write(obj.note)
+      ..writeByte(26)
+      ..write(obj.terminal)
+      ..writeByte(27)
+      ..write(obj.customerPhone)
+      ..writeByte(28)
+      ..write(obj.customerAddress)
+      ..writeByte(29)
+      ..write(obj.customerName)
+      ..writeByte(30)
+      ..write(obj.customerEmail)
+      ..writeByte(31)
+      ..write(obj.tableID)
+      ..writeByte(32)
+      ..write(obj.tableName)
+      ..writeByte(33)
+      ..write(obj.seqNum)
+      ..writeByte(34)
+      ..write(obj.taxList)
+      ..writeByte(35)
+      ..write(obj.discountList)
+      ..writeByte(36)
+      ..write(obj.detailsList)
+      ..writeByte(37)
+      ..write(obj.isReprint)
+      ..writeByte(38)
+      ..write(obj.completedBy)
+      ..writeByte(39)
+      ..write(obj.depositAmt);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is OrderAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}

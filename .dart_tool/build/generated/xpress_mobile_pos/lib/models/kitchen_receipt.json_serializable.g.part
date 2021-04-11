@@ -1,0 +1,64 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+KitchenReceipt _$KitchenReceiptFromJson(Map<String, dynamic> json) {
+  return KitchenReceipt(
+    json['id'] as String,
+    json['companyId'] as String,
+    json['showHeader'] as bool,
+    json['headerSpace'] as int,
+    json['showOrderNumber'] as bool,
+    json['orderNumberSize'] as int,
+    json['showOrderType'] as bool,
+    json['orderTypeSize'] as int,
+    json['showNumberOfPpl'] as bool,
+    json['showTable'] as bool,
+    json['showOrderTime'] as bool,
+    json['orderTimeSize'] as int,
+    json['showCashierInfo'] as bool,
+    json['cashierInfoSize'] as int,
+    json['showOneQty'] as bool,
+    json['showAbbreviate'] as bool,
+    json['orderItemSize'] as int,
+    json['dividedLine'] as bool,
+    json['footerSpace'] as int,
+    json['cutOneByOne'] as bool,
+    json['separatedModification'] as bool,
+    json['modificationSize'] as int,
+    json['splitSameItems'] as bool,
+    json['showPrice'] as bool,
+    json['orderRemark'] as bool,
+    json['orderRemarkSize'] as int,
+  );
+}
+
+Map<String, dynamic> _$KitchenReceiptToJson(KitchenReceipt instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'companyId': instance.companyId,
+      'showHeader': instance.showHeader,
+      'headerSpace': instance.headerSpace,
+      'showOrderNumber': instance.showOrderNumber,
+      'orderNumberSize': instance.orderNumberSize,
+      'showOrderType': instance.showOrderType,
+      'orderTypeSize': instance.orderTypeSize,
+      'showNumberOfPpl': instance.showNumberOfPpl,
+      'showTable': instance.showTable,
+      'showOrderTime': instance.showOrderTime,
+      'orderTimeSize': instance.orderTimeSize,
+      'showCashierInfo': instance.showCashierInfo,
+      'cashierInfoSize': instance.cashierInfoSize,
+      'showOneQty': instance.showOneQty,
+      'showAbbreviate': instance.showAbbreviate,
+      'orderItemSize': instance.orderItemSize,
+      'dividedLine': instance.dividedLine,
+      'footerSpace': instance.footerSpace,
+      'cutOneByOne': instance.cutOneByOne,
+      'separatedModification': instance.separatedModification,
+      'modificationSize': instance.modificationSize,
+      'splitSameItems': instance.splitSameItems,
+      'showPrice': instance.showPrice,
+      'orderRemark': instance.orderRemark,
+      'orderRemarkSize': instance.orderRemarkSize,
+    };

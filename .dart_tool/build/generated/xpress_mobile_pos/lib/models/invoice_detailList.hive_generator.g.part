@@ -1,0 +1,353 @@
+// **************************************************************************
+// TypeAdapterGenerator
+// **************************************************************************
+
+class InvoiceDetailsListAdapter extends TypeAdapter<InvoiceDetailsList> {
+  @override
+  final int typeId = 27;
+
+  @override
+  InvoiceDetailsList read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return InvoiceDetailsList(
+      id: fields[0] as String,
+      orderDetailsId: fields[1] as String,
+      invoiceID: fields[2] as String,
+      companyID: fields[3] as String,
+      invoiceTime: fields[4] as String,
+      branchId: fields[5] as String,
+      menuItemID: fields[6] as int,
+      qty: fields[7] as int,
+      price: fields[8] as double,
+      itemCost: fields[9] as double,
+      taxAmt: fields[10] as double,
+      totalDiscountAmt: fields[11] as double,
+      subTotalAmt: fields[12] as double,
+      totalAmt: fields[13] as double,
+      comment: fields[14] as String,
+      isUsingDesignFee: fields[15] as bool,
+      designFee: fields[16] as double,
+      menuCategoryId: fields[17] as int,
+      menuGroupId: fields[18] as int,
+      salesCategoryId: fields[19] as int,
+      weight: fields[20] as double,
+      status: fields[21] as int,
+      modifierList:
+          (fields[22] as List)?.cast<InvoiceDetailsListModifierList>(),
+      discountList:
+          (fields[23] as List)?.cast<InvoiceDetailsListDiscountList>(),
+      taxList: (fields[24] as List)?.cast<InvoiceDetailsListTaxList>(),
+      variantList: (fields[25] as List)?.cast<InvoiceDetailsListVariantList>(),
+      promotionList:
+          (fields[26] as List)?.cast<InvoiceDetailsListPromotionList>(),
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, InvoiceDetailsList obj) {
+    writer
+      ..writeByte(27)
+      ..writeByte(0)
+      ..write(obj.id)
+      ..writeByte(1)
+      ..write(obj.orderDetailsId)
+      ..writeByte(2)
+      ..write(obj.invoiceID)
+      ..writeByte(3)
+      ..write(obj.companyID)
+      ..writeByte(4)
+      ..write(obj.invoiceTime)
+      ..writeByte(5)
+      ..write(obj.branchId)
+      ..writeByte(6)
+      ..write(obj.menuItemID)
+      ..writeByte(7)
+      ..write(obj.qty)
+      ..writeByte(8)
+      ..write(obj.price)
+      ..writeByte(9)
+      ..write(obj.itemCost)
+      ..writeByte(10)
+      ..write(obj.taxAmt)
+      ..writeByte(11)
+      ..write(obj.totalDiscountAmt)
+      ..writeByte(12)
+      ..write(obj.subTotalAmt)
+      ..writeByte(13)
+      ..write(obj.totalAmt)
+      ..writeByte(14)
+      ..write(obj.comment)
+      ..writeByte(15)
+      ..write(obj.isUsingDesignFee)
+      ..writeByte(16)
+      ..write(obj.designFee)
+      ..writeByte(17)
+      ..write(obj.menuCategoryId)
+      ..writeByte(18)
+      ..write(obj.menuGroupId)
+      ..writeByte(19)
+      ..write(obj.salesCategoryId)
+      ..writeByte(20)
+      ..write(obj.weight)
+      ..writeByte(21)
+      ..write(obj.status)
+      ..writeByte(22)
+      ..write(obj.modifierList)
+      ..writeByte(23)
+      ..write(obj.discountList)
+      ..writeByte(24)
+      ..write(obj.taxList)
+      ..writeByte(25)
+      ..write(obj.variantList)
+      ..writeByte(26)
+      ..write(obj.promotionList);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is InvoiceDetailsListAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class InvoiceDetailsListModifierListAdapter
+    extends TypeAdapter<InvoiceDetailsListModifierList> {
+  @override
+  final int typeId = 28;
+
+  @override
+  InvoiceDetailsListModifierList read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return InvoiceDetailsListModifierList(
+      id: fields[0] as String,
+      invoiceDetailsID: fields[1] as String,
+      modifierItemID: fields[2] as int,
+      qty: fields[3] as int,
+      totalAmt: fields[4] as double,
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, InvoiceDetailsListModifierList obj) {
+    writer
+      ..writeByte(5)
+      ..writeByte(0)
+      ..write(obj.id)
+      ..writeByte(1)
+      ..write(obj.invoiceDetailsID)
+      ..writeByte(2)
+      ..write(obj.modifierItemID)
+      ..writeByte(3)
+      ..write(obj.qty)
+      ..writeByte(4)
+      ..write(obj.totalAmt);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is InvoiceDetailsListModifierListAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class InvoiceDetailsListDiscountListAdapter
+    extends TypeAdapter<InvoiceDetailsListDiscountList> {
+  @override
+  final int typeId = 29;
+
+  @override
+  InvoiceDetailsListDiscountList read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return InvoiceDetailsListDiscountList(
+      id: fields[0] as String,
+      invoiceDetailsID: fields[1] as String,
+      discountID: fields[2] as int,
+      discountBy: fields[3] as int,
+      name: fields[4] as String,
+      rate: fields[5] as double,
+      amt: fields[6] as double,
+      isAmtDiscount: fields[7] as bool,
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, InvoiceDetailsListDiscountList obj) {
+    writer
+      ..writeByte(8)
+      ..writeByte(0)
+      ..write(obj.id)
+      ..writeByte(1)
+      ..write(obj.invoiceDetailsID)
+      ..writeByte(2)
+      ..write(obj.discountID)
+      ..writeByte(3)
+      ..write(obj.discountBy)
+      ..writeByte(4)
+      ..write(obj.name)
+      ..writeByte(5)
+      ..write(obj.rate)
+      ..writeByte(6)
+      ..write(obj.amt)
+      ..writeByte(7)
+      ..write(obj.isAmtDiscount);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is InvoiceDetailsListDiscountListAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class InvoiceDetailsListTaxListAdapter
+    extends TypeAdapter<InvoiceDetailsListTaxList> {
+  @override
+  final int typeId = 30;
+
+  @override
+  InvoiceDetailsListTaxList read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return InvoiceDetailsListTaxList(
+      invoiceDetailsID: fields[0] as String,
+      taxRate: fields[3] as double,
+      taxID: fields[1] as int,
+      amt: fields[4] as double,
+      name: fields[2] as String,
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, InvoiceDetailsListTaxList obj) {
+    writer
+      ..writeByte(5)
+      ..writeByte(0)
+      ..write(obj.invoiceDetailsID)
+      ..writeByte(1)
+      ..write(obj.taxID)
+      ..writeByte(2)
+      ..write(obj.name)
+      ..writeByte(3)
+      ..write(obj.taxRate)
+      ..writeByte(4)
+      ..write(obj.amt);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is InvoiceDetailsListTaxListAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class InvoiceDetailsListVariantListAdapter
+    extends TypeAdapter<InvoiceDetailsListVariantList> {
+  @override
+  final int typeId = 31;
+
+  @override
+  InvoiceDetailsListVariantList read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return InvoiceDetailsListVariantList(
+      invoiceDetailsID: fields[0] as String,
+      variantID: fields[1] as int,
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, InvoiceDetailsListVariantList obj) {
+    writer
+      ..writeByte(2)
+      ..writeByte(0)
+      ..write(obj.invoiceDetailsID)
+      ..writeByte(1)
+      ..write(obj.variantID);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is InvoiceDetailsListVariantListAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class InvoiceDetailsListPromotionListAdapter
+    extends TypeAdapter<InvoiceDetailsListPromotionList> {
+  @override
+  final int typeId = 32;
+
+  @override
+  InvoiceDetailsListPromotionList read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return InvoiceDetailsListPromotionList(
+      id: fields[0] as String,
+      invoiceDetailsID: fields[1] as String,
+      promotionID: fields[2] as int,
+      description: fields[3] as String,
+      amt: fields[4] as double,
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, InvoiceDetailsListPromotionList obj) {
+    writer
+      ..writeByte(5)
+      ..writeByte(0)
+      ..write(obj.id)
+      ..writeByte(1)
+      ..write(obj.invoiceDetailsID)
+      ..writeByte(2)
+      ..write(obj.promotionID)
+      ..writeByte(3)
+      ..write(obj.description)
+      ..writeByte(4)
+      ..write(obj.amt);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is InvoiceDetailsListPromotionListAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}

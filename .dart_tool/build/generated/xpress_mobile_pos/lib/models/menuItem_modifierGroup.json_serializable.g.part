@@ -1,0 +1,26 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+MenuItemModifierGroup _$MenuItemModifierGroupFromJson(
+    Map<String, dynamic> json) {
+  return MenuItemModifierGroup(
+    json['menuItemID'] as int,
+    json['modifierGroupID'] as int,
+    json['orderIndex'] as int,
+    json['parentMenuItemId'] as int,
+    json['parentModifierGroupId'] as int,
+    json['isDeleted'] as bool,
+  );
+}
+
+Map<String, dynamic> _$MenuItemModifierGroupToJson(
+        MenuItemModifierGroup instance) =>
+    <String, dynamic>{
+      'menuItemID': instance.menuItemID,
+      'modifierGroupID': instance.modifierGroupID,
+      'orderIndex': instance.orderIndex,
+      'parentMenuItemId': instance.parentMenuItemId,
+      'parentModifierGroupId': instance.parentModifierGroupId,
+      'isDeleted': instance.isDeleted,
+    };

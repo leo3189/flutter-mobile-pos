@@ -1,0 +1,24 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+OrderDetailsPromotionList _$OrderDetailsPromotionListFromJson(
+    Map<String, dynamic> json) {
+  return OrderDetailsPromotionList(
+    json['id'] as String,
+    json['orderDetailsID'] as String,
+    json['promotionID'] as int,
+    json['description'] as String,
+    (json['amt'] as num)?.toDouble(),
+  );
+}
+
+Map<String, dynamic> _$OrderDetailsPromotionListToJson(
+        OrderDetailsPromotionList instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'orderDetailsID': instance.orderDetailsID,
+      'promotionID': instance.promotionID,
+      'description': instance.description,
+      'amt': instance.amt,
+    };

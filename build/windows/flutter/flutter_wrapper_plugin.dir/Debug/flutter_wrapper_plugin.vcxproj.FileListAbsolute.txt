@@ -1,0 +1,2 @@
+C:\xpress_mobile_pos\build\windows\flutter\Debug\flutter_wrapper_plugin.pdb
+C:\xpress_mobile_pos\build\windows\flutter\flutter_wrapper_plugin.dir\Debug\flutter_wrapper_plugin.pdb

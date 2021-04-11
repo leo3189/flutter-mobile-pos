@@ -1,0 +1,172 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+Invoice _$InvoiceFromJson(Map<String, dynamic> json) {
+  return Invoice(
+    id: json['id'] as String,
+    companyID: json['companyID'] as String,
+    branchID: json['branchID'] as String,
+    orderID: json['orderID'] as String,
+    numOfGuest: json['numOfGuest'] as int,
+    orderSeqNum: json['orderSeqNum'] as int,
+    invoiceNum: json['invoiceNum'] as int,
+    invoiceTime: json['invoiceTime'] as String,
+    closeTime: json['closeTime'] as String,
+    status: json['status'] as int,
+    orderBy: json['orderBy'] as int,
+    createdBy: json['createdBy'] as int,
+    voidedBy: json['voidedBy'] as int,
+    customerID: json['customerID'] as String,
+    tipsAmt: (json['tipsAmt'] as num)?.toDouble(),
+    serviceChargeAmt: (json['serviceChargeAmt'] as num)?.toDouble(),
+    totalTaxAmt: (json['totalTaxAmt'] as num)?.toDouble(),
+    totalDiscountAmt: (json['totalDiscountAmt'] as num)?.toDouble(),
+    orderDiscountAmt: (json['orderDiscountAmt'] as num)?.toDouble(),
+    subTotalAmt: (json['subTotalAmt'] as num)?.toDouble(),
+    totalAmt: (json['totalAmt'] as num)?.toDouble(),
+    totalCost: (json['totalCost'] as num)?.toDouble(),
+    paidAmt: (json['paidAmt'] as num)?.toDouble(),
+    changeAmt: (json['changeAmt'] as num)?.toDouble(),
+    depositAmt: (json['depositAmt'] as num)?.toDouble(),
+    balanceAmt: (json['balanceAmt'] as num)?.toDouble(),
+    deliveryFee: (json['deliveryFee'] as num)?.toDouble(),
+    isLastCheck: json['isLastCheck'] as bool,
+    orderTypeID: json['orderTypeID'] as int,
+    terminal: json['terminal'] as String,
+    isReprint: json['isReprint'] as bool,
+    printedCount: json['printedCount'] as int,
+    pickupLocation: json['pickupLocation'] as String,
+    toGoTime: json['toGoTime'] as String,
+    isCakeOrder: json['isCakeOrder'] as bool,
+    customerPhone: json['customerPhone'] as String,
+    customerAddress: json['customerAddress'] as String,
+    customerName: json['customerName'] as String,
+    tableID: json['tableID'] as String,
+    tableName: json['tableName'] as String,
+    splitTotal: json['splitTotal'] as int,
+    splitIndex: json['splitIndex'] as int,
+    splitType: json['splitType'] as int,
+    paymentList: (json['paymentList'] as List)
+        ?.map((e) => e == null
+            ? null
+            : InvoicePaymentList.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    detailsList: (json['detailsList'] as List)
+        ?.map((e) => e == null
+            ? null
+            : InvoiceDetailsList.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    discountList: (json['discountList'] as List)
+        ?.map((e) => e == null
+            ? null
+            : InvoiceDiscountList.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    taxList: (json['taxList'] as List)
+        ?.map((e) => e == null
+            ? null
+            : InvoiceTaxList.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    note: json['note'] as String,
+  )..serviceChargePercentage =
+      (json['serviceChargePercentage'] as num)?.toDouble();
+}
+
+Map<String, dynamic> _$InvoiceToJson(Invoice instance) => <String, dynamic>{
+      'id': instance.id,
+      'companyID': instance.companyID,
+      'branchID': instance.branchID,
+      'orderID': instance.orderID,
+      'numOfGuest': instance.numOfGuest,
+      'orderSeqNum': instance.orderSeqNum,
+      'invoiceNum': instance.invoiceNum,
+      'invoiceTime': instance.invoiceTime,
+      'closeTime': instance.closeTime,
+      'status': instance.status,
+      'orderBy': instance.orderBy,
+      'createdBy': instance.createdBy,
+      'voidedBy': instance.voidedBy,
+      'customerID': instance.customerID,
+      'tipsAmt': instance.tipsAmt,
+      'serviceChargeAmt': instance.serviceChargeAmt,
+      'totalTaxAmt': instance.totalTaxAmt,
+      'totalDiscountAmt': instance.totalDiscountAmt,
+      'orderDiscountAmt': instance.orderDiscountAmt,
+      'subTotalAmt': instance.subTotalAmt,
+      'totalAmt': instance.totalAmt,
+      'totalCost': instance.totalCost,
+      'paidAmt': instance.paidAmt,
+      'changeAmt': instance.changeAmt,
+      'depositAmt': instance.depositAmt,
+      'balanceAmt': instance.balanceAmt,
+      'deliveryFee': instance.deliveryFee,
+      'isLastCheck': instance.isLastCheck,
+      'orderTypeID': instance.orderTypeID,
+      'terminal': instance.terminal,
+      'isReprint': instance.isReprint,
+      'printedCount': instance.printedCount,
+      'pickupLocation': instance.pickupLocation,
+      'toGoTime': instance.toGoTime,
+      'isCakeOrder': instance.isCakeOrder,
+      'customerPhone': instance.customerPhone,
+      'customerAddress': instance.customerAddress,
+      'customerName': instance.customerName,
+      'tableID': instance.tableID,
+      'tableName': instance.tableName,
+      'splitTotal': instance.splitTotal,
+      'splitIndex': instance.splitIndex,
+      'splitType': instance.splitType,
+      'paymentList': instance.paymentList?.map((e) => e?.toJson())?.toList(),
+      'detailsList': instance.detailsList?.map((e) => e?.toJson())?.toList(),
+      'discountList': instance.discountList?.map((e) => e?.toJson())?.toList(),
+      'taxList': instance.taxList?.map((e) => e?.toJson())?.toList(),
+      'note': instance.note,
+      'serviceChargePercentage': instance.serviceChargePercentage,
+    };
+
+InvoiceDiscountList _$InvoiceDiscountListFromJson(Map<String, dynamic> json) {
+  return InvoiceDiscountList(
+    id: json['id'] as String,
+    invoiceID: json['invoiceID'] as String,
+    discountID: json['discountID'] as int,
+    discountBy: json['discountBy'] as int,
+    name: json['name'] as String,
+    rate: (json['rate'] as num)?.toDouble(),
+    amt: (json['amt'] as num)?.toDouble(),
+    isAmtDiscount: json['isAmtDiscount'] as bool,
+  );
+}
+
+Map<String, dynamic> _$InvoiceDiscountListToJson(
+        InvoiceDiscountList instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'invoiceID': instance.invoiceID,
+      'discountID': instance.discountID,
+      'discountBy': instance.discountBy,
+      'name': instance.name,
+      'rate': instance.rate,
+      'amt': instance.amt,
+      'isAmtDiscount': instance.isAmtDiscount,
+    };
+
+InvoiceTaxList _$InvoiceTaxListFromJson(Map<String, dynamic> json) {
+  return InvoiceTaxList(
+    id: json['id'] as String,
+    invoiceID: json['invoiceID'] as String,
+    taxID: json['taxID'] as int,
+    name: json['name'] as String,
+    taxRate: (json['taxRate'] as num)?.toDouble(),
+    amt: (json['amt'] as num)?.toDouble(),
+  );
+}
+
+Map<String, dynamic> _$InvoiceTaxListToJson(InvoiceTaxList instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'invoiceID': instance.invoiceID,
+      'taxID': instance.taxID,
+      'name': instance.name,
+      'taxRate': instance.taxRate,
+      'amt': instance.amt,
+    };

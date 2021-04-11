@@ -1,0 +1,175 @@
+// **************************************************************************
+// TypeAdapterGenerator
+// **************************************************************************
+
+class SalesReceiptAdapter extends TypeAdapter<SalesReceipt> {
+  @override
+  final int typeId = 47;
+
+  @override
+  SalesReceipt read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return SalesReceipt(
+      fields[0] as String,
+      fields[1] as String,
+      fields[2] as bool,
+      fields[3] as int,
+      fields[4] as bool,
+      fields[5] as bool,
+      fields[6] as int,
+      fields[7] as String,
+      fields[8] as bool,
+      fields[9] as int,
+      fields[10] as bool,
+      fields[11] as int,
+      fields[12] as bool,
+      fields[13] as bool,
+      fields[23] as int,
+      fields[15] as bool,
+      fields[16] as int,
+      fields[17] as bool,
+      fields[18] as int,
+      fields[19] as bool,
+      fields[20] as bool,
+      fields[21] as int,
+      fields[22] as bool,
+      fields[14] as int,
+      fields[24] as bool,
+      fields[25] as bool,
+      fields[26] as bool,
+      fields[27] as int,
+      fields[28] as bool,
+      fields[29] as bool,
+      fields[30] as bool,
+      fields[31] as int,
+      fields[32] as int,
+      fields[33] as bool,
+      fields[34] as int,
+      fields[35] as bool,
+      fields[36] as int,
+      fields[37] as bool,
+      fields[38] as bool,
+      fields[39] as bool,
+      fields[40] as int,
+      fields[41] as bool,
+      fields[42] as bool,
+      fields[43] as bool,
+      fields[44] as int,
+      fields[45] as String,
+      fields[46] as int,
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, SalesReceipt obj) {
+    writer
+      ..writeByte(47)
+      ..writeByte(0)
+      ..write(obj.id)
+      ..writeByte(1)
+      ..write(obj.companyID)
+      ..writeByte(2)
+      ..write(obj.showHeader)
+      ..writeByte(3)
+      ..write(obj.headerSpace)
+      ..writeByte(4)
+      ..write(obj.showLogo)
+      ..writeByte(5)
+      ..write(obj.showStoreInfo)
+      ..writeByte(6)
+      ..write(obj.storeInfoSize)
+      ..writeByte(7)
+      ..write(obj.headerText)
+      ..writeByte(8)
+      ..write(obj.showOrderNumber)
+      ..writeByte(9)
+      ..write(obj.orderNumberSize)
+      ..writeByte(10)
+      ..write(obj.showTable)
+      ..writeByte(11)
+      ..write(obj.tableSize)
+      ..writeByte(12)
+      ..write(obj.showNumberOfPpl)
+      ..writeByte(13)
+      ..write(obj.showOrderTime)
+      ..writeByte(14)
+      ..write(obj.orderTimeSize)
+      ..writeByte(15)
+      ..write(obj.showCashierInfo)
+      ..writeByte(16)
+      ..write(obj.cashierInfoSize)
+      ..writeByte(17)
+      ..write(obj.showCustomerInfo)
+      ..writeByte(18)
+      ..write(obj.customerInfoSize)
+      ..writeByte(19)
+      ..write(obj.showOrder)
+      ..writeByte(20)
+      ..write(obj.orderRemark)
+      ..writeByte(21)
+      ..write(obj.orderRemarkSize)
+      ..writeByte(22)
+      ..write(obj.showOneQty)
+      ..writeByte(23)
+      ..write(obj.orderItemSize)
+      ..writeByte(24)
+      ..write(obj.showAbbreviate)
+      ..writeByte(25)
+      ..write(obj.showModGroupName)
+      ..writeByte(26)
+      ..write(obj.separateModification)
+      ..writeByte(27)
+      ..write(obj.modificationSize)
+      ..writeByte(28)
+      ..write(obj.dividedLine)
+      ..writeByte(29)
+      ..write(obj.splitSameItems)
+      ..writeByte(30)
+      ..write(obj.showPaymentInfo)
+      ..writeByte(31)
+      ..write(obj.subtotalSize)
+      ..writeByte(32)
+      ..write(obj.totalAmtSize)
+      ..writeByte(33)
+      ..write(obj.showPaymentType)
+      ..writeByte(34)
+      ..write(obj.paymentTypeSize)
+      ..writeByte(35)
+      ..write(obj.showPaymentStatus)
+      ..writeByte(36)
+      ..write(obj.paymentStatusSize)
+      ..writeByte(37)
+      ..write(obj.showPONumber)
+      ..writeByte(38)
+      ..write(obj.showBarcode)
+      ..writeByte(39)
+      ..write(obj.showTips)
+      ..writeByte(40)
+      ..write(obj.tipsSize)
+      ..writeByte(41)
+      ..write(obj.showOffers)
+      ..writeByte(42)
+      ..write(obj.taxExemptProof)
+      ..writeByte(43)
+      ..write(obj.showFooter)
+      ..writeByte(44)
+      ..write(obj.footerTextSize)
+      ..writeByte(45)
+      ..write(obj.footerText)
+      ..writeByte(46)
+      ..write(obj.footerSpace);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is SalesReceiptAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}

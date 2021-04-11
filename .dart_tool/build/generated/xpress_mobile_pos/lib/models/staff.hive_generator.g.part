@@ -1,0 +1,329 @@
+// **************************************************************************
+// TypeAdapterGenerator
+// **************************************************************************
+
+class StaffAdapter extends TypeAdapter<Staff> {
+  @override
+  final int typeId = 41;
+
+  @override
+  Staff read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return Staff(
+      fields[0] as int,
+      fields[1] as String,
+      fields[2] as String,
+      fields[3] as String,
+      fields[4] as String,
+      fields[5] as String,
+      fields[6] as bool,
+      fields[7] as int,
+      fields[8] as String,
+      fields[9] as String,
+      fields[10] as String,
+      fields[11] as String,
+      fields[12] as String,
+      fields[13] as String,
+      fields[14] as String,
+      fields[15] as String,
+      fields[16] as String,
+      fields[17] as double,
+      fields[18] as String,
+      fields[19] as double,
+      fields[20] as String,
+      fields[21] as String,
+      fields[22] as String,
+      fields[23] as String,
+      fields[24] as String,
+      fields[25] as bool,
+      fields[26] as String,
+      fields[27] as bool,
+      fields[28] as bool,
+      fields[29] as bool,
+      fields[31] as bool,
+      fields[30] as bool,
+      (fields[32] as List)?.cast<StaffPermissionList>(),
+      (fields[33] as List)?.cast<StaffShift>(),
+      (fields[35] as List)?.cast<StaffShiftSetting>(),
+      (fields[34] as List)?.cast<StaffAttendance>(),
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, Staff obj) {
+    writer
+      ..writeByte(36)
+      ..writeByte(0)
+      ..write(obj.id)
+      ..writeByte(1)
+      ..write(obj.companyID)
+      ..writeByte(2)
+      ..write(obj.branchID)
+      ..writeByte(3)
+      ..write(obj.nickName)
+      ..writeByte(4)
+      ..write(obj.firstName)
+      ..writeByte(5)
+      ..write(obj.lastName)
+      ..writeByte(6)
+      ..write(obj.onlineStatus)
+      ..writeByte(7)
+      ..write(obj.imageID)
+      ..writeByte(8)
+      ..write(obj.fileID)
+      ..writeByte(9)
+      ..write(obj.ssn)
+      ..writeByte(10)
+      ..write(obj.street)
+      ..writeByte(11)
+      ..write(obj.city)
+      ..writeByte(12)
+      ..write(obj.state)
+      ..writeByte(13)
+      ..write(obj.postalCode)
+      ..writeByte(14)
+      ..write(obj.phone)
+      ..writeByte(15)
+      ..write(obj.email)
+      ..writeByte(16)
+      ..write(obj.posPin)
+      ..writeByte(17)
+      ..write(obj.salary)
+      ..writeByte(18)
+      ..write(obj.salaryType)
+      ..writeByte(19)
+      ..write(obj.otRate)
+      ..writeByte(20)
+      ..write(obj.employeeCard)
+      ..writeByte(21)
+      ..write(obj.note)
+      ..writeByte(22)
+      ..write(obj.dob)
+      ..writeByte(23)
+      ..write(obj.createdDate)
+      ..writeByte(24)
+      ..write(obj.lastUpdate)
+      ..writeByte(25)
+      ..write(obj.isUsingFingerprint)
+      ..writeByte(26)
+      ..write(obj.referBy)
+      ..writeByte(27)
+      ..write(obj.active)
+      ..writeByte(28)
+      ..write(obj.isDeleted)
+      ..writeByte(29)
+      ..write(obj.isNeedClockIn)
+      ..writeByte(30)
+      ..write(obj.isSuperUser)
+      ..writeByte(31)
+      ..write(obj.isSelfOrderUser)
+      ..writeByte(32)
+      ..write(obj.permissionsList)
+      ..writeByte(33)
+      ..write(obj.shifts)
+      ..writeByte(34)
+      ..write(obj.attendances)
+      ..writeByte(35)
+      ..write(obj.shiftSettings);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is StaffAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class StaffPermissionListAdapter extends TypeAdapter<StaffPermissionList> {
+  @override
+  final int typeId = 42;
+
+  @override
+  StaffPermissionList read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return StaffPermissionList(
+      fields[0] as int,
+      fields[1] as int,
+      fields[2] as StaffType,
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, StaffPermissionList obj) {
+    writer
+      ..writeByte(3)
+      ..writeByte(0)
+      ..write(obj.staffID)
+      ..writeByte(1)
+      ..write(obj.staffTypeID)
+      ..writeByte(2)
+      ..write(obj.staffType);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is StaffPermissionListAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class StaffShiftAdapter extends TypeAdapter<StaffShift> {
+  @override
+  final int typeId = 43;
+
+  @override
+  StaffShift read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return StaffShift(
+      fields[0] as String,
+      fields[1] as String,
+      fields[2] as String,
+      fields[3] as String,
+      fields[4] as String,
+      fields[5] as bool,
+      fields[6] as bool,
+      fields[7] as int,
+      fields[8] as int,
+      fields[9] as String,
+      fields[10] as String,
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, StaffShift obj) {
+    writer
+      ..writeByte(11)
+      ..writeByte(0)
+      ..write(obj.id)
+      ..writeByte(1)
+      ..write(obj.start)
+      ..writeByte(2)
+      ..write(obj.end)
+      ..writeByte(3)
+      ..write(obj.title)
+      ..writeByte(4)
+      ..write(obj.color)
+      ..writeByte(5)
+      ..write(obj.allDay)
+      ..writeByte(6)
+      ..write(obj.customValue)
+      ..writeByte(7)
+      ..write(obj.staffTypeID)
+      ..writeByte(8)
+      ..write(obj.staffID)
+      ..writeByte(9)
+      ..write(obj.branchID)
+      ..writeByte(10)
+      ..write(obj.shiftTypeID);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is StaffShiftAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class StaffAttendanceAdapter extends TypeAdapter<StaffAttendance> {
+  @override
+  final int typeId = 44;
+
+  @override
+  StaffAttendance read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return StaffAttendance(
+      fields[0] as int,
+      fields[1] as String,
+      fields[2] as String,
+      fields[3] as bool,
+      fields[4] as bool,
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, StaffAttendance obj) {
+    writer
+      ..writeByte(5)
+      ..writeByte(0)
+      ..write(obj.staffID)
+      ..writeByte(1)
+      ..write(obj.shiftID)
+      ..writeByte(2)
+      ..write(obj.clockTime)
+      ..writeByte(3)
+      ..write(obj.isOtRequest)
+      ..writeByte(4)
+      ..write(obj.isClockIn);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is StaffAttendanceAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class StaffShiftSettingAdapter extends TypeAdapter<StaffShiftSetting> {
+  @override
+  final int typeId = 45;
+
+  @override
+  StaffShiftSetting read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return StaffShiftSetting(
+      fields[0] as int,
+      fields[1] as int,
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, StaffShiftSetting obj) {
+    writer
+      ..writeByte(2)
+      ..writeByte(0)
+      ..write(obj.staffID)
+      ..writeByte(1)
+      ..write(obj.shiftSettingID);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is StaffShiftSettingAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}

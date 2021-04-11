@@ -1,0 +1,25 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+NameList _$NameListFromJson(Map<String, dynamic> json) {
+  return NameList(
+    json['id'] as int,
+    json['menuID'] as int,
+    json['languageID'] as int,
+    json['localName'] as String,
+    json['onlineName'],
+    json['orderIndex'] as int,
+    json['shortName'],
+  );
+}
+
+Map<String, dynamic> _$NameListToJson(NameList instance) => <String, dynamic>{
+      'id': instance.id,
+      'menuID': instance.menuID,
+      'languageID': instance.languageID,
+      'localName': instance.localName,
+      'onlineName': instance.onlineName,
+      'shortName': instance.shortName,
+      'orderIndex': instance.orderIndex,
+    };
