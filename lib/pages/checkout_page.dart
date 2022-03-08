@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_masked_text/flutter_masked_text.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
-import 'package:xpress_mobile_pos/helpers/diolog_helper.dart';
-import 'package:xpress_mobile_pos/helpers/print_helper.dart';
-import 'package:xpress_mobile_pos/models/invoice.dart';
-import 'package:xpress_mobile_pos/models/order.dart';
-import 'package:xpress_mobile_pos/providers/cart_provider.dart';
-import 'package:xpress_mobile_pos/providers/payment_provider.dart';
+import 'package:flutter_mobile_pos/helpers/diolog_helper.dart';
+import 'package:flutter_mobile_pos/helpers/print_helper.dart';
+import 'package:flutter_mobile_pos/models/invoice.dart';
+import 'package:flutter_mobile_pos/models/order.dart';
+import 'package:flutter_mobile_pos/providers/cart_provider.dart';
+import 'package:flutter_mobile_pos/providers/payment_provider.dart';
 
 class CheckoutPage extends StatefulWidget {
   @override

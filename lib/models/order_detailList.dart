@@ -4,15 +4,15 @@ import 'package:flutter/foundation.dart';
 import 'package:hive/hive.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:uuid/uuid.dart';
-import 'package:xpress_mobile_pos/helpers/sp_helper.dart';
-import 'package:xpress_mobile_pos/models/menu_item.dart';
-import 'package:xpress_mobile_pos/models/modifier_item.dart';
-import 'package:xpress_mobile_pos/models/orderDetails_modifierList.dart';
-import 'package:xpress_mobile_pos/models/orderDetails_discountList.dart';
-import 'package:xpress_mobile_pos/models/orderDetails_promotionList.dart';
-import 'package:xpress_mobile_pos/models/orderDetails_taxList.dart';
-import 'package:xpress_mobile_pos/models/orderDetails_variantList.dart';
-import 'package:xpress_mobile_pos/models/variant_list.dart';
+import 'package:flutter_mobile_pos/helpers/sp_helper.dart';
+import 'package:flutter_mobile_pos/models/menu_item.dart';
+import 'package:flutter_mobile_pos/models/modifier_item.dart';
+import 'package:flutter_mobile_pos/models/orderDetails_modifierList.dart';
+import 'package:flutter_mobile_pos/models/orderDetails_discountList.dart';
+import 'package:flutter_mobile_pos/models/orderDetails_promotionList.dart';
+import 'package:flutter_mobile_pos/models/orderDetails_taxList.dart';
+import 'package:flutter_mobile_pos/models/orderDetails_variantList.dart';
+import 'package:flutter_mobile_pos/models/variant_list.dart';
 
 part 'order_detailList.g.dart';
 

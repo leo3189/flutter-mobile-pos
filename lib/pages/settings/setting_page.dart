@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
-import 'package:xpress_mobile_pos/pages/settings/setting_printer.dart';
-import 'package:xpress_mobile_pos/providers/setting_provider.dart';
+import 'package:flutter_mobile_pos/pages/settings/setting_printer.dart';
+import 'package:flutter_mobile_pos/providers/setting_provider.dart';
 
 class SettingPage extends StatefulWidget {
   @override

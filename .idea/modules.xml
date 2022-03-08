@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/xpress_mobile_pos.iml" filepath="$PROJECT_DIR$/xpress_mobile_pos.iml" />
-      <module fileurl="file://$PROJECT_DIR$/android/xpress_mobile_pos_android.iml" filepath="$PROJECT_DIR$/android/xpress_mobile_pos_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flutter_mobile_pos.iml" filepath="$PROJECT_DIR$/flutter_mobile_pos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/flutter_mobile_pos_android.iml" filepath="$PROJECT_DIR$/android/flutter_mobile_pos_android.iml" />
     </modules>
   </component>
 </project>

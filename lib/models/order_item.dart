@@ -1,4 +1,4 @@
-import 'package:xpress_mobile_pos/models/menu_item.dart';
+import 'package:flutter_mobile_pos/models/menu_item.dart';
 
 class OrderItem {
   int itemId;

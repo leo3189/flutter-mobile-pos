@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:xpress_mobile_pos/helpers/diolog_helper.dart';
-import 'package:xpress_mobile_pos/helpers/sp_helper.dart';
-import 'package:xpress_mobile_pos/models/login_dto.dart';
-import 'package:xpress_mobile_pos/models/login_response.dart';
-import 'package:xpress_mobile_pos/services/api_service.dart';
+import 'package:flutter_mobile_pos/helpers/diolog_helper.dart';
+import 'package:flutter_mobile_pos/helpers/sp_helper.dart';
+import 'package:flutter_mobile_pos/models/login_dto.dart';
+import 'package:flutter_mobile_pos/models/login_response.dart';
+import 'package:flutter_mobile_pos/services/api_service.dart';
 
 class LoginPage extends StatefulWidget {
   @override

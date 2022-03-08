@@ -3,17 +3,17 @@ import 'dart:convert';
 import 'package:hive/hive.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:uuid/uuid.dart';
-import 'package:xpress_mobile_pos/helpers/database_helper.dart';
-import 'package:xpress_mobile_pos/helpers/sp_helper.dart';
-import 'package:xpress_mobile_pos/helpers/syncData_helper.dart';
-import 'package:xpress_mobile_pos/models/daily_seq.dart';
-import 'package:xpress_mobile_pos/models/invoice.dart';
-import 'package:xpress_mobile_pos/models/menu_item.dart';
-import 'package:xpress_mobile_pos/models/orderDetails_taxList.dart';
-import 'package:xpress_mobile_pos/models/order_detailList.dart';
-import 'package:xpress_mobile_pos/models/order_discountList.dart';
-import 'package:xpress_mobile_pos/models/order_taxList.dart';
-import 'package:xpress_mobile_pos/models/staff.dart';
+import 'package:flutter_mobile_pos/helpers/database_helper.dart';
+import 'package:flutter_mobile_pos/helpers/sp_helper.dart';
+import 'package:flutter_mobile_pos/helpers/syncData_helper.dart';
+import 'package:flutter_mobile_pos/models/daily_seq.dart';
+import 'package:flutter_mobile_pos/models/invoice.dart';
+import 'package:flutter_mobile_pos/models/menu_item.dart';
+import 'package:flutter_mobile_pos/models/orderDetails_taxList.dart';
+import 'package:flutter_mobile_pos/models/order_detailList.dart';
+import 'package:flutter_mobile_pos/models/order_discountList.dart';
+import 'package:flutter_mobile_pos/models/order_taxList.dart';
+import 'package:flutter_mobile_pos/models/staff.dart';
 
 part 'order.g.dart';
 

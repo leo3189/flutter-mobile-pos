@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.15)
-project(xpress_mobile_pos LANGUAGES CXX)
+project(flutter_mobile_pos LANGUAGES CXX)
 
-set(BINARY_NAME "xpress_mobile_pos")
+set(BINARY_NAME "flutter_mobile_pos")
 
 cmake_policy(SET CMP0063 NEW)
 

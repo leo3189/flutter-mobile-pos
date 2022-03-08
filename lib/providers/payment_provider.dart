@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
-import 'package:xpress_mobile_pos/models/invoice.dart';
-import 'package:xpress_mobile_pos/models/invoice_paymentList.dart';
-import 'package:xpress_mobile_pos/models/order.dart';
-import 'package:xpress_mobile_pos/models/order_invoice.dart';
+import 'package:flutter_mobile_pos/models/invoice.dart';
+import 'package:flutter_mobile_pos/models/invoice_paymentList.dart';
+import 'package:flutter_mobile_pos/models/order.dart';
+import 'package:flutter_mobile_pos/models/order_invoice.dart';
 
 class PaymentProvider extends ChangeNotifier {
 

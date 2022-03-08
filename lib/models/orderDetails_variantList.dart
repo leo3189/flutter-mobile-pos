@@ -1,6 +1,6 @@
 import 'package:hive/hive.dart';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:xpress_mobile_pos/models/variant_list.dart';
+import 'package:flutter_mobile_pos/models/variant_list.dart';
 
 part 'orderDetails_variantList.g.dart';
 

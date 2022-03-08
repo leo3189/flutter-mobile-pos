@@ -2,10 +2,10 @@ import 'dart:convert';
 
 import 'package:hive/hive.dart';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:xpress_mobile_pos/helpers/database_helper.dart';
-import 'package:xpress_mobile_pos/helpers/syncData_helper.dart';
-import 'package:xpress_mobile_pos/models/invoice.dart';
-import 'package:xpress_mobile_pos/models/order.dart';
+import 'package:flutter_mobile_pos/helpers/database_helper.dart';
+import 'package:flutter_mobile_pos/helpers/syncData_helper.dart';
+import 'package:flutter_mobile_pos/models/invoice.dart';
+import 'package:flutter_mobile_pos/models/order.dart';
 
 part 'order_invoice.g.dart';
 

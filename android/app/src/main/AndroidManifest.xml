@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.xpress_mobile_pos">
+    package="com.example.flutter_mobile_pos">
    <application
-        android:label="xpress_mobile_pos"
+        android:label="flutter_mobile_pos"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

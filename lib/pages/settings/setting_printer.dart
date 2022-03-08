@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:xpress_mobile_pos/providers/setting_provider.dart';
+import 'package:flutter_mobile_pos/providers/setting_provider.dart';
 import 'package:provider/provider.dart';
 
 class SettingPrinterPage extends StatefulWidget {

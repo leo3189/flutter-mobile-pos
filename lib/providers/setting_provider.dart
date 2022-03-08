@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:xpress_mobile_pos/helpers/database_helper.dart';
-import 'package:xpress_mobile_pos/helpers/sp_helper.dart';
-import 'package:xpress_mobile_pos/models/setting.dart';
+import 'package:flutter_mobile_pos/helpers/database_helper.dart';
+import 'package:flutter_mobile_pos/helpers/sp_helper.dart';
+import 'package:flutter_mobile_pos/models/setting.dart';
 
 class SettingProvider extends ChangeNotifier {
   final List<String> settingItems = [

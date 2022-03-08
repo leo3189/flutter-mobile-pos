@@ -7,13 +7,13 @@ import 'package:flutter/services.dart';
 import 'package:image/image.dart';
 import 'package:intl/intl.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:xpress_mobile_pos/helpers/database_helper.dart';
-import 'package:xpress_mobile_pos/helpers/sp_helper.dart';
-import 'package:xpress_mobile_pos/models/branch_info.dart';
-import 'package:xpress_mobile_pos/models/invoice.dart';
-import 'package:xpress_mobile_pos/models/order.dart';
-import 'package:xpress_mobile_pos/models/printer.dart';
-import 'package:xpress_mobile_pos/models/virtual_receipt.dart';
+import 'package:flutter_mobile_pos/helpers/database_helper.dart';
+import 'package:flutter_mobile_pos/helpers/sp_helper.dart';
+import 'package:flutter_mobile_pos/models/branch_info.dart';
+import 'package:flutter_mobile_pos/models/invoice.dart';
+import 'package:flutter_mobile_pos/models/order.dart';
+import 'package:flutter_mobile_pos/models/printer.dart';
+import 'package:flutter_mobile_pos/models/virtual_receipt.dart';
 
 class PrintHelper {
   

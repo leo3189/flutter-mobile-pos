@@ -1,15 +1,15 @@
 import 'package:flutter/foundation.dart';
 import 'package:uuid/uuid.dart';
-import 'package:xpress_mobile_pos/helpers/sp_helper.dart';
-import 'package:xpress_mobile_pos/models/menu.dart';
-import 'package:xpress_mobile_pos/models/modifier_item.dart';
-import 'package:xpress_mobile_pos/models/order.dart';
-import 'package:xpress_mobile_pos/models/orderDetails_modifierList.dart';
-import 'package:xpress_mobile_pos/models/order_detailList.dart';
-import 'package:xpress_mobile_pos/models/order_item.dart';
-import 'package:xpress_mobile_pos/models/menu_item.dart';
-import 'package:xpress_mobile_pos/models/staff.dart';
-import 'package:xpress_mobile_pos/models/variant_list.dart';
+import 'package:flutter_mobile_pos/helpers/sp_helper.dart';
+import 'package:flutter_mobile_pos/models/menu.dart';
+import 'package:flutter_mobile_pos/models/modifier_item.dart';
+import 'package:flutter_mobile_pos/models/order.dart';
+import 'package:flutter_mobile_pos/models/orderDetails_modifierList.dart';
+import 'package:flutter_mobile_pos/models/order_detailList.dart';
+import 'package:flutter_mobile_pos/models/order_item.dart';
+import 'package:flutter_mobile_pos/models/menu_item.dart';
+import 'package:flutter_mobile_pos/models/staff.dart';
+import 'package:flutter_mobile_pos/models/variant_list.dart';
 
 class CartProvider extends ChangeNotifier {
   List<OrderItem> _orderItems = [];

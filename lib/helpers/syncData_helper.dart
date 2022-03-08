@@ -1,8 +1,8 @@
 import 'package:uuid/uuid.dart';
-import 'package:xpress_mobile_pos/helpers/database_helper.dart';
-import 'package:xpress_mobile_pos/models/data_response.dart';
-import 'package:xpress_mobile_pos/models/sync_data.dart';
-import 'package:xpress_mobile_pos/services/api_service.dart';
+import 'package:flutter_mobile_pos/helpers/database_helper.dart';
+import 'package:flutter_mobile_pos/models/data_response.dart';
+import 'package:flutter_mobile_pos/models/sync_data.dart';
+import 'package:flutter_mobile_pos/services/api_service.dart';
 
 class SyncDataHelper {
   static createSyncData(String action, String object) async {

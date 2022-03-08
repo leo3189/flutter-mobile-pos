@@ -1,6 +1,6 @@
 import 'package:hive/hive.dart';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:xpress_mobile_pos/models/taxes.dart';
+import 'package:flutter_mobile_pos/models/taxes.dart';
 
 part 'menuItem_tax.g.dart';
 

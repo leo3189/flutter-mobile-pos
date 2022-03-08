@@ -1,4 +1,4 @@
-# xpress_mobile_pos
+# flutter_mobile_pos
 
 A new Flutter project.
 

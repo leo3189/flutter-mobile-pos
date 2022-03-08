@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
-import 'package:xpress_mobile_pos/helpers/database_helper.dart';
-import 'package:xpress_mobile_pos/helpers/sp_helper.dart';
-import 'package:xpress_mobile_pos/pages/checkout_page.dart';
-import 'package:xpress_mobile_pos/pages/home_page.dart';
-import 'package:xpress_mobile_pos/pages/load_data_page.dart';
-import 'package:xpress_mobile_pos/pages/login_page.dart';
-import 'package:xpress_mobile_pos/pages/order_page.dart';
-import 'package:xpress_mobile_pos/pages/settings/setting_page.dart';
-import 'package:xpress_mobile_pos/providers/cart_provider.dart';
-import 'package:xpress_mobile_pos/providers/payment_provider.dart';
-import 'package:xpress_mobile_pos/providers/setting_provider.dart';
+import 'package:flutter_mobile_pos/helpers/database_helper.dart';
+import 'package:flutter_mobile_pos/helpers/sp_helper.dart';
+import 'package:flutter_mobile_pos/pages/checkout_page.dart';
+import 'package:flutter_mobile_pos/pages/home_page.dart';
+import 'package:flutter_mobile_pos/pages/load_data_page.dart';
+import 'package:flutter_mobile_pos/pages/login_page.dart';
+import 'package:flutter_mobile_pos/pages/order_page.dart';
+import 'package:flutter_mobile_pos/pages/settings/setting_page.dart';
+import 'package:flutter_mobile_pos/providers/cart_provider.dart';
+import 'package:flutter_mobile_pos/providers/payment_provider.dart';
+import 'package:flutter_mobile_pos/providers/setting_provider.dart';
 
 void main() {
   DatabaseHelper.instance.init();

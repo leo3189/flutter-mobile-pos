@@ -1,13 +1,12 @@
 import 'package:dio/dio.dart';
-import 'package:xpress_mobile_pos/services/data_service.dart';
-import 'package:xpress_mobile_pos/services/sync_data_service.dart';
+import 'package:flutter_mobile_pos/services/data_service.dart';
+import 'package:flutter_mobile_pos/services/sync_data_service.dart';
 
 import 'login_service.dart';
 
 class ApiService {
   Dio dio;
-  String basePath = "https://xpress.qaapi.abcpos.com/api/v1";
-  // String basePath = "http://192.168.86.129:5005/api/v1";
+  String basePath = "http://localhost/api/v1";
 
   ApiService({ this.dio }) {
     if (dio == null) {

@@ -1,8 +1,8 @@
 import 'package:hive/hive.dart';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:xpress_mobile_pos/models/kitchen_receipt.dart';
-import 'package:xpress_mobile_pos/models/label_format.dart';
-import 'package:xpress_mobile_pos/models/sales_receipt.dart';
+import 'package:flutter_mobile_pos/models/kitchen_receipt.dart';
+import 'package:flutter_mobile_pos/models/label_format.dart';
+import 'package:flutter_mobile_pos/models/sales_receipt.dart';
 
 part 'virtual_receipt.g.dart';
 

@@ -3,16 +3,16 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
-import 'package:xpress_mobile_pos/helpers/database_helper.dart';
-import 'package:xpress_mobile_pos/helpers/name_helper.dart';
-import 'package:xpress_mobile_pos/models/menu.dart';
-import 'package:xpress_mobile_pos/models/menu_category.dart';
-import 'package:xpress_mobile_pos/models/menu_item.dart';
-import 'package:xpress_mobile_pos/models/modifier_group.dart';
-import 'package:xpress_mobile_pos/models/modifier_item.dart';
-import 'package:xpress_mobile_pos/models/variant_group.dart';
-import 'package:xpress_mobile_pos/models/variant_list.dart';
-import 'package:xpress_mobile_pos/providers/cart_provider.dart';
+import 'package:flutter_mobile_pos/helpers/database_helper.dart';
+import 'package:flutter_mobile_pos/helpers/name_helper.dart';
+import 'package:flutter_mobile_pos/models/menu.dart';
+import 'package:flutter_mobile_pos/models/menu_category.dart';
+import 'package:flutter_mobile_pos/models/menu_item.dart';
+import 'package:flutter_mobile_pos/models/modifier_group.dart';
+import 'package:flutter_mobile_pos/models/modifier_item.dart';
+import 'package:flutter_mobile_pos/models/variant_group.dart';
+import 'package:flutter_mobile_pos/models/variant_list.dart';
+import 'package:flutter_mobile_pos/providers/cart_provider.dart';
 
 class OrderPage extends StatefulWidget {
   @override
